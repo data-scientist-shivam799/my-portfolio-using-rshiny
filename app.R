@@ -12,11 +12,11 @@ ui <- navbarPage(theme = shinytheme("flatly"),
       sidebarPanel(
         # Personal Information
         h3("Shivam Kumar"),
-        # fluidRow(
-        #   column(width = 11,
-        #          imageOutput("profile_image")
-        #   )
-        # ),
+        fluidRow(
+          column(width = 11,
+                 imageOutput("profile_image")
+          )
+        ),
         br(),
         p("✔️ Founder of All Stars Program | 📊 Full Stack Data Scientist | 🤖 A.I. Engineer | 🖥️ Computer Vision | 👨‍💻 Natural Language
           Processing | 👨‍💼 Budding Entrepreneur | 💡 Innovator | 🎓 Self-Taught MBA"),
@@ -237,11 +237,11 @@ ui <- navbarPage(theme = shinytheme("flatly"),
 
 
 server <- function(input, output) {
-  # output$profile_image <- renderImage({
-  #   list(src = "D:\\R programming\\R\\Portfolio\\www\\images\\Img1.jpeg",
-  #        style = "max-width: 100%; height: auto;",
-  #        alt = "Shivam Kumar")
-  # }, deleteFile = FALSE)
+  output$profile_image <- renderImage({
+    list(src = "D:\\R programming\\R\\Portfolio\\www\\images\\Img1.jpeg",
+         style = "max-width: 100%; height: auto;",
+         alt = "Shivam Kumar")
+  }, deleteFile = FALSE)
 }
 
 
